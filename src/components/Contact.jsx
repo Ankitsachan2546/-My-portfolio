@@ -23,6 +23,11 @@ const Contact = () => {
         const data = new FormData(form);
         const recipientEmail = import.meta.env.VITE_USER_EMAIL || config.email;
 
+        // Add extra configuration for FormSubmit
+        data.append('_captcha', 'false');
+
+        console.log('Sending message to:', recipientEmail);
+
         try {
             const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
                 method: "POST",
@@ -32,14 +37,19 @@ const Contact = () => {
                 }
             });
 
-            if (response.ok) {
+            const result = await response.json();
+            console.log('FormSubmit Response:', result);
+
+            if (response.ok && result.success === "true") {
                 setStatus('success');
                 setFormData({ name: '', email: '', message: '' });
                 setTimeout(() => setStatus('idle'), 5000);
             } else {
+                console.error('Form submission failed:', result.message);
                 setStatus('error');
             }
         } catch (error) {
+            console.error('Network error during form submission:', error);
             setStatus('error');
         }
     };
