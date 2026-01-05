@@ -35,10 +35,10 @@ const Services = () => {
                         {/* Hover Gradient Background */}
                         <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`} />
 
-                        <div className="mb-8 p-5 inline-block rounded-2xl bg-white/[0.03] border border-white/5 relative group-hover:scale-110 transition-transform duration-500">
-                            <service.icon className={`w-12 h-12 bg-gradient-to-br ${service.color} p-0.5 rounded-lg`} style={{ fill: 'url(#gradient)' }} />
+                        <div className="mb-8 p-5 inline-block rounded-2xl bg-white/[0.03] border border-white/5 relative group-hover:bg-blue-500/10 transition-colors duration-500">
+                            <service.icon className="w-12 h-12 text-blue-400 group-hover:text-white transition-colors duration-500" />
                             {/* Adding a small emoji tag for extra flair as requested */}
-                            <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs animate-pulse">
+                            <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-lg shadow-xl shadow-black/50 group-hover:scale-110 transition-transform">
                                 {index === 0 ? '🎨' : index === 1 ? '⚙️' : '🚀'}
                             </div>
                         </div>
