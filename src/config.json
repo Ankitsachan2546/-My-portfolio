@@ -1,0 +1,101 @@
+{
+  "name": "Ankit Sachan",
+  "jobTitle": "Full Stack Developer",
+  "skills": {
+    "frontend": [
+      {
+        "name": "React.js",
+        "icon": "reactjs",
+        "level": "Mastered"
+      },
+      {
+        "name": "Next.js",
+        "icon": "nextjs",
+        "level": "Advancing"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "ts",
+        "level": "Advancing"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "tailwind",
+        "level": "Mastered"
+      },
+      {
+        "name": "Redux Toolkit",
+        "icon": "redux",
+        "level": "Advancing"
+      }
+    ],
+    "backend": [
+      {
+        "name": "Node.js",
+        "icon": "simple-icons:nodedotjs",
+        "level": "Mastered"
+      },
+      {
+        "name": "Express.js",
+        "icon": "express",
+        "level": "Mastered"
+      },
+      {
+        "name": "Go (Golang)",
+        "icon": "simple-icons:go",
+        "level": "Learning"
+      },
+      {
+        "name": "Prisma ORM",
+        "icon": "prisma",
+        "level": "Advancing"
+      },
+      {
+        "name": "Docker",
+        "icon": "docker",
+        "level": "Learning"
+      }
+    ],
+    "database": [
+      {
+        "name": "MongoDB",
+        "icon": "mongodb",
+        "level": "Mastered"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "postgresql",
+        "level": "Advancing"
+      },
+      {
+        "name": "MySQL",
+        "icon": "mysql",
+        "level": "Advancing"
+      },
+      {
+        "name": "Redis",
+        "icon": "redis",
+        "level": "Learning"
+      }
+    ]
+  },
+  "links": [
+    {
+      "href": "https://github.com/",
+      "text": "github",
+      "icon": "github"
+    },
+    {
+      "href": "https://www.linkedin.com/in/ankit-sachan-840604265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "text": "linkedin",
+      "icon": "linkedin"
+    },
+    {
+      "href": "mailto:amansachan15435@gmail.com",
+      "text": "email",
+      "icon": "email"
+    }
+  ],
+  "email": "amansachan15435@gmail.com",
+  "resume": "#"
+}
