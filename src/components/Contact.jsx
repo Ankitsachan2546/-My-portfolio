@@ -21,9 +21,10 @@ const Contact = () => {
 
         const form = e.target;
         const data = new FormData(form);
+        const recipientEmail = import.meta.env.VITE_USER_EMAIL || config.email;
 
         try {
-            const response = await fetch(`https://formsubmit.co/ajax/${config.email}`, {
+            const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
                 method: "POST",
                 body: data,
                 headers: {
@@ -148,8 +149,8 @@ const Contact = () => {
                         type="submit"
                         disabled={status === 'sending'}
                         className={`w-full py-5 text-white rounded-[1.25rem] font-black uppercase tracking-widest text-sm transition-all flex items-center justify-center space-x-3 group ${status === 'success' ? 'bg-green-600' :
-                                status === 'error' ? 'bg-red-600' :
-                                    'bg-blue-600 hover:bg-blue-700 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]'
+                            status === 'error' ? 'bg-red-600' :
+                                'bg-blue-600 hover:bg-blue-700 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]'
                             } active:scale-95 disabled:opacity-50`}
                     >
                         {status === 'sending' ? (
