@@ -6,19 +6,19 @@ const Services = () => {
     const services = [
         {
             title: 'Frontend Development',
-            description: 'Building high-performance, pixel-perfect user interfaces using React, Next.js, and Tailwind CSS. Focused on responsiveness and micro-interactions.',
+            description: 'Building high-performance, pixel-perfect user interfaces using React, Next.js, and Tailwind CSS.',
             icon: SiReact,
             color: 'from-blue-500 to-cyan-400'
         },
         {
             title: 'Backend Development',
-            description: 'Architecting scalable server-side systems and RESTful APIs with Node.js and Go. Expert in database optimization and secure authentication.',
+            description: 'Architecting scalable server-side systems and RESTful APIs with Node.js and Go. Expert in database optimization.',
             icon: SiNodedotjs,
             color: 'from-green-500 to-emerald-400'
         },
         {
             title: 'Full Stack Solutions',
-            description: 'End-to-end development from database design to cloud deployment. delivering seamless, enterprise-grade web applications.',
+            description: 'End-to-end development from database design to cloud deployment, delivering seamless web applications.',
             icon: SiFigma,
             color: 'from-purple-500 to-pink-400'
         }
@@ -30,24 +30,24 @@ const Services = () => {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className="glass-card p-10 rounded-3xl group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,163,255,0.1)]"
+                        className="glass-card p-8 rounded-3xl group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,163,255,0.1)]"
                     >
                         {/* Hover Gradient Background */}
                         <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`} />
 
-                        <div className="mb-8 p-5 inline-block rounded-2xl bg-white/[0.03] border border-white/5 relative group-hover:bg-blue-500/10 transition-colors duration-500">
-                            <service.icon className="w-12 h-12 text-blue-400 group-hover:text-white transition-colors duration-500" />
+                        <div className="mb-6 p-4 inline-block rounded-2xl bg-white/[0.03] border border-white/5 relative group-hover:bg-blue-500/10 transition-colors duration-500">
+                            <service.icon className="w-10 h-10 text-blue-400 group-hover:text-white transition-colors duration-500" />
                             {/* Adding a small emoji tag for extra flair as requested */}
-                            <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-lg shadow-xl shadow-black/50 group-hover:scale-110 transition-transform">
+                            <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-sm shadow-xl shadow-black/50 group-hover:scale-110 transition-transform">
                                 {index === 0 ? '🎨' : index === 1 ? '⚙️' : '🚀'}
                             </div>
                         </div>
 
-                        <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
                             {service.title}
                         </h3>
 
-                        <p className="text-gray-400 leading-relaxed text-base">
+                        <p className="text-gray-400 leading-relaxed text-sm">
                             {service.description}
                         </p>
                     </div>

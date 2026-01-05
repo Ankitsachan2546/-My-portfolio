@@ -4,7 +4,7 @@ import Icon from './Icon';
 
 const Footer = () => {
     return (
-        <footer className="relative py-12 md:py-20 px-6 overflow-hidden">
+        <footer className="relative py-10 md:py-16 px-6 overflow-hidden">
             {/* Background Decoration */}
             <div className="absolute inset-0 bg-blue-500/[0.02] border-t border-white/5" />
 
@@ -31,7 +31,7 @@ const Footer = () => {
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 rounded-2xl glass-card flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/30 transition-all active:scale-90"
+                                className="w-11 h-11 rounded-2xl glass-card flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/30 transition-all active:scale-90"
                             >
                                 <Icon name={link.icon} className="w-5 h-5" />
                                 <span className="sr-only">{link.text}</span>

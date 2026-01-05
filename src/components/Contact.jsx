@@ -115,7 +115,7 @@ const Contact = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 className="w-full p-4 rounded-2xl bg-white/5 border border-white/5 text-white focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 outline-none transition-all disabled:opacity-50 placeholder:text-gray-600"
-                                placeholder="Anmol"
+                                placeholder="Name"
                                 disabled={status === 'sending'}
                             />
                         </div>
@@ -131,7 +131,7 @@ const Contact = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 className="w-full p-4 rounded-2xl bg-white/5 border border-white/5 text-white focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 outline-none transition-all disabled:opacity-50 placeholder:text-gray-600"
-                                placeholder={config.email}
+                                placeholder="Email"
                                 disabled={status === 'sending'}
                             />
                             <datalist id="email-suggestions">

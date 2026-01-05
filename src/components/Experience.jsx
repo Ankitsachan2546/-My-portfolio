@@ -61,27 +61,27 @@ const Experience = () => {
                         </div>
 
                         {/* Details Box - Right (3/4 width on desktop) */}
-                        <div className="md:col-span-3 glass-card rounded-[2.5rem] p-8 md:p-12 group-hover:border-blue-500/20 transition-all duration-500 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-3xl -mr-16 -mt-16" />
+                        <div className="md:col-span-3 glass-card rounded-3xl p-6 md:p-8 group-hover:border-blue-500/20 transition-all duration-500 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 blur-3xl -mr-12 -mt-12" />
 
-                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
                                 <div>
-                                    <h3 className="text-2xl md:text-3xl font-black text-white group-hover:text-blue-400 transition-colors mb-1">
+                                    <h3 className="text-xl md:text-2xl font-black text-white group-hover:text-blue-400 transition-colors mb-1">
                                         {exp.role}
                                     </h3>
-                                    <p className="text-blue-500 font-bold tracking-widest text-xs uppercase">
+                                    <p className="text-blue-500 font-bold tracking-widest text-[10px] uppercase">
                                         {exp.company}
                                     </p>
                                 </div>
-                                <span className="px-4 py-2 rounded-xl bg-white/5 text-gray-400 text-xs font-bold border border-white/5 h-fit">
+                                <span className="px-3 py-1.5 rounded-lg bg-white/5 text-gray-400 text-[10px] font-bold border border-white/5 h-fit">
                                     {exp.period}
                                 </span>
                             </div>
 
-                            <ul className="space-y-4">
+                            <ul className="space-y-3">
                                 {exp.description.map((point, i) => (
-                                    <li key={i} className="flex items-start gap-4 text-gray-400 leading-relaxed text-base group-hover:text-gray-300 transition-colors">
-                                        <div className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+                                    <li key={i} className="flex items-start gap-3 text-gray-400 leading-relaxed text-sm group-hover:text-gray-300 transition-colors">
+                                        <div className="mt-2 w-1 h-1 rounded-full bg-blue-500 shrink-0 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
                                         <span>{point}</span>
                                     </li>
                                 ))}
