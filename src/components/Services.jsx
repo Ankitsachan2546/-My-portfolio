@@ -35,8 +35,12 @@ const Services = () => {
                         {/* Hover Gradient Background */}
                         <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`} />
 
-                        <div className={`mb-8 p-4 inline-block rounded-2xl bg-white/[0.03] border border-white/5 bg-gradient-to-br ${service.color} bg-clip-text`}>
-                            <service.icon className="w-12 h-12 text-transparent" />
+                        <div className="mb-8 p-5 inline-block rounded-2xl bg-white/[0.03] border border-white/5 relative group-hover:scale-110 transition-transform duration-500">
+                            <service.icon className={`w-12 h-12 bg-gradient-to-br ${service.color} p-0.5 rounded-lg`} style={{ fill: 'url(#gradient)' }} />
+                            {/* Adding a small emoji tag for extra flair as requested */}
+                            <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs animate-pulse">
+                                {index === 0 ? '🎨' : index === 1 ? '⚙️' : '🚀'}
+                            </div>
                         </div>
 
                         <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
@@ -49,6 +53,14 @@ const Services = () => {
                     </div>
                 ))}
             </div>
+
+            {/* SVG Gradient definition for the icons */}
+            <svg width="0" height="0" className="absolute">
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#00a3ff" />
+                    <stop offset="100%" stopColor="#22d3ee" />
+                </linearGradient>
+            </svg>
         </Section>
     );
 };

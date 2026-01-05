@@ -16,7 +16,7 @@ function App() {
 
       <Navbar />
 
-      <main className="relative z-10 space-y-32 md:space-y-48 pb-32">
+      <main className="relative z-10 space-y-20 md:space-y-28 pb-32">
         <Hero />
         <Services />
         <Skills />
